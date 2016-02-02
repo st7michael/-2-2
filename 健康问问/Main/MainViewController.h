@@ -9,21 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface MainViewController : UIViewController<UIScrollViewDelegate,UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UIImageView *textFieldBgView;
-@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UIButton *rb1;
+@property (weak, nonatomic) IBOutlet UIButton *lb3;
+@property (weak, nonatomic) IBOutlet UIButton *rb2;
+@property (weak, nonatomic) IBOutlet UIButton *rb3;
+
+@property (weak, nonatomic) IBOutlet UIButton *lb1;
+@property (weak, nonatomic) IBOutlet UIButton *lb2;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UIButton *button1;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView1;
-@property (weak, nonatomic) IBOutlet UIButton *button2;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView2;
-@property (weak, nonatomic) IBOutlet UIButton *button3;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView3;
-@property (weak, nonatomic) IBOutlet UIButton *button4;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView4;
-@property (weak, nonatomic) IBOutlet UIButton *button5;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView5;
-@property (weak, nonatomic) IBOutlet UIButton *button6;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView6;
 @property  UIPageControl *pc;
 @property NSInteger page;
 @property UITableView *tableView;

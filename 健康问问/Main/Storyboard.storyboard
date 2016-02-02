@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="AiC-mB-631">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="IFw-zL-bG9">
+            <objects>
+                <viewController id="AiC-mB-631" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ykN-Cp-S1N"/>
+                        <viewControllerLayoutGuide type="bottom" id="0fG-SG-wXZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rMY-QN-3GE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eRB-yt-WqV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="E97-nV-XHH"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7l-Ft-o24">
+                                <rect key="frame" x="43" y="216" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Shb-9h-5VC">
+                                <rect key="frame" x="194" y="229" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afl-SK-pCn">
+                                <rect key="frame" x="62" y="304" width="46" height="46"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7m-yX-KYc">
+                                <rect key="frame" x="194" y="304" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6S-Xc-gN9">
+                                <rect key="frame" x="43" y="373" width="65" height="45"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3D-Wr-UiI">
+                                <rect key="frame" x="194" y="388" width="67" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EdF-V6-FqP">
+                                <rect key="frame" x="0.0" y="128" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="KNu-LK-xNC"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.61984551529999998" green="1" blue="0.32751929969999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="E7l-Ft-o24" firstAttribute="leading" secondItem="rMY-QN-3GE" secondAttribute="leadingMargin" id="0Ie-e6-lbd"/>
+                            <constraint firstItem="n6S-Xc-gN9" firstAttribute="top" secondItem="Afl-SK-pCn" secondAttribute="bottom" id="5qm-66-tWZ"/>
+                            <constraint firstItem="i7m-yX-KYc" firstAttribute="top" secondItem="Shb-9h-5VC" secondAttribute="bottom" id="8ii-CQ-sGZ"/>
+                            <constraint firstItem="EdF-V6-FqP" firstAttribute="top" secondItem="eRB-yt-WqV" secondAttribute="bottom" id="CBo-fi-V83"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Shb-9h-5VC" secondAttribute="trailing" id="DVa-l6-vo9"/>
+                            <constraint firstItem="Afl-SK-pCn" firstAttribute="top" secondItem="E7l-Ft-o24" secondAttribute="bottom" id="FzM-q9-Diz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EdF-V6-FqP" secondAttribute="trailing" constant="-20" id="HjJ-a7-oIc"/>
+                            <constraint firstItem="n6S-Xc-gN9" firstAttribute="leading" secondItem="rMY-QN-3GE" secondAttribute="leadingMargin" id="KVt-oS-TF0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eRB-yt-WqV" secondAttribute="trailing" constant="-20" id="MGo-L2-M96"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i7m-yX-KYc" secondAttribute="trailing" id="MXb-Da-2hw"/>
+                            <constraint firstItem="eRB-yt-WqV" firstAttribute="leading" secondItem="rMY-QN-3GE" secondAttribute="leadingMargin" constant="-20" id="O81-Ui-xeP"/>
+                            <constraint firstItem="E7l-Ft-o24" firstAttribute="top" secondItem="EdF-V6-FqP" secondAttribute="bottom" id="PSX-2E-JdO"/>
+                            <constraint firstItem="0fG-SG-wXZ" firstAttribute="top" secondItem="n6S-Xc-gN9" secondAttribute="bottom" id="UVN-0j-22B"/>
+                            <constraint firstItem="eRB-yt-WqV" firstAttribute="top" secondItem="ykN-Cp-S1N" secondAttribute="bottom" constant="-20" id="VcN-dV-rBe"/>
+                            <constraint firstItem="Q3D-Wr-UiI" firstAttribute="top" secondItem="i7m-yX-KYc" secondAttribute="bottom" id="agu-eT-An2"/>
+                            <constraint firstItem="0fG-SG-wXZ" firstAttribute="top" secondItem="Q3D-Wr-UiI" secondAttribute="bottom" id="cZg-MR-IvD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q3D-Wr-UiI" secondAttribute="trailing" id="pHi-cM-wmC"/>
+                            <constraint firstItem="EdF-V6-FqP" firstAttribute="leading" secondItem="rMY-QN-3GE" secondAttribute="leadingMargin" constant="-20" id="t9y-z9-CTp"/>
+                            <constraint firstItem="Afl-SK-pCn" firstAttribute="leading" secondItem="rMY-QN-3GE" secondAttribute="leadingMargin" id="txB-Xm-lNd"/>
+                            <constraint firstItem="Shb-9h-5VC" firstAttribute="top" secondItem="EdF-V6-FqP" secondAttribute="bottom" id="yMW-Cc-zwR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lb1" destination="E7l-Ft-o24" id="WAp-TO-HRf"/>
+                        <outlet property="lb2" destination="Afl-SK-pCn" id="45b-AL-YZc"/>
+                        <outlet property="lb3" destination="n6S-Xc-gN9" id="NfW-O5-DYZ"/>
+                        <outlet property="rb1" destination="Shb-9h-5VC" id="KCT-Oh-JZy"/>
+                        <outlet property="rb2" destination="i7m-yX-KYc" id="wFN-Zp-B3L"/>
+                        <outlet property="rb3" destination="Q3D-Wr-UiI" id="WQH-bY-ZfD"/>
+                        <outlet property="scrollView" destination="eRB-yt-WqV" id="T4v-Th-psF"/>
+                        <outlet property="searchView" destination="EdF-V6-FqP" id="c6A-LU-zsv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l19-RH-JR6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234" y="-78"/>
+        </scene>
+    </scenes>
+</document>

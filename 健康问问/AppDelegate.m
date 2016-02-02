@@ -22,7 +22,9 @@
     [self.window makeKeyAndVisible];
     
     BaseNavigationController *navigVC=[[BaseNavigationController alloc]init];
-    MainViewController *mainVC=[[MainViewController alloc]initWithNibName:@"MainViewController" bundle:[NSBundle mainBundle]];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
+    MainViewController *mainVC = [storyboard instantiateInitialViewController];
     [navigVC addChildViewController:mainVC];
     self.window.rootViewController=navigVC;
     
