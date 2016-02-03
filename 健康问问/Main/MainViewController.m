@@ -23,7 +23,21 @@
 #import <Masonry.h>
 
 @interface MainViewController ()
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rb3h;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rb3w;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *lb3w;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *lb3h;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rb2w;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rb2h;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *lb2w;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *lb2h;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rb1h;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rb1w;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *lb1h;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *lb1w;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *searchW;
 @end
 
 
@@ -38,23 +52,85 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     [self _setTopView];
+    [self setButton];
+    _constraint.constant = self.view.size.width;
+    _searchW.constant = self.view.size.width;
+    
+    CGFloat bottomH = self.view.size.height-_searchView.height-_scrollView.height;
+    
+    
+    _lb1h.constant = bottomH * 0.333;
+    _lb1w.constant = self.view.size.width * 0.5;
+    _rb1h.constant = bottomH * 0.333;
+    _rb1w.constant = self.view.size.width * 0.5;
+    
+    _lb2h.constant = bottomH * 0.333;
+    _lb2w.constant = self.view.size.width * 0.5;
+    _rb2h.constant = bottomH * 0.333;
+    _rb2w.constant = self.view.size.width * 0.5;
+    
+    _lb3h.constant = bottomH * 0.334;
+    _lb3w.constant = self.view.size.width * 0.5;
+    _rb3h.constant = bottomH * 0.334;
+    _rb3w.constant = self.view.size.width * 0.5;
+    
 }
 
 - (void)setButton{
-    _rb1.backgroundColor = [UIColor redColor];
+//    MASViewAttribute *buttonArea = [[MASViewAttribute alloc]init];
+//    buttonArea.view.height = self.view.size.height - 128 - 44;
+//
+//    
+//    [_scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        
+//        make.centerX.mas_equalTo(self.view.mas_centerX);
+//        make.top.equalTo(self.view.mas_top).with.offset(0);
+//        
+//        make.height.mas_equalTo(@200);
+//        
+//        make.left.equalTo(self.view).with.offset(0);
+//        
+//    }];
+    
+//    
+//    
+//    //_rb1.backgroundColor = [UIColor redColor];
     [_rb1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(self.view.mas_width).multipliedBy(0.5);
-        make.height.equalTo(self.view.mas_height).multipliedBy(0.3333);
-
+       
     }];
-    
-    _lb1.backgroundColor = [UIColor blackColor];
-    [_lb1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.equalTo(self.view.mas_width).multipliedBy(0.5);
-        make.height.equalTo(self.view.mas_height).multipliedBy(0.3333);
-
-    }];
-    
+//
+//    //_lb1.backgroundColor = [UIColor blackColor];
+//    [_lb1 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.width.equalTo(self.view.mas_width).multipliedBy(0.5);
+//        
+//    }];
+//    
+//    
+//    //_lb2.backgroundColor = [UIColor yellowColor];
+//    [_lb2 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.width.equalTo(self.view.mas_width).multipliedBy(0.5);
+//        
+//    }];
+//    
+//    //_lb3.backgroundColor = [UIColor blueColor];
+//    [_lb3 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.width.equalTo(self.view.mas_width).multipliedBy(0.5);
+//        
+//    }];
+//    
+//    
+//    //_rb2.backgroundColor = [UIColor purpleColor];
+//    [_rb2 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.width.equalTo(self.view.mas_width).multipliedBy(0.5);
+//        
+//    }];
+//    
+//    //_rb3.backgroundColor = [UIColor purpleColor];
+//    [_rb3 mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.width.equalTo(self.view.mas_width).multipliedBy(0.5);
+//    }];
+//    
 }
 
 - (void)_setTopView
@@ -70,7 +146,8 @@
     _scrollView.showsHorizontalScrollIndicator=NO;
     _scrollView.showsVerticalScrollIndicator=NO;
 
-    _pc=[[UIPageControl alloc]initWithFrame:CGRectMake(80, 120,200,60)];
+    _pc=[[UIPageControl alloc]init];
+    _pc.size = _scrollView.size;
     //_pc = [[UIPageControl alloc]init];
     
     _pc.numberOfPages=4;
